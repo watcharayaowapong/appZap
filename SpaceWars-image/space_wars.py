@@ -418,13 +418,14 @@ PLAYER_NAME	= 'DAN'		#sws.PLAYER_NAME	# 'DAN'
 
 
 # Initialize Global variables
-screen_sizeX = 1600
-screen_sizeY = 1200
+#1440 900
+screen_sizeX = 1440
+screen_sizeY = 900
 screen_size = (screen_sizeX, screen_sizeY)
 background_color = black
 # Initialize screen
-screen = pygame.display.set_mode((screen_sizeX, screen_sizeY))
-#screen = pygame.display.set_mode((screen_sizeX, screen_sizeY), flags=pygame.FULLSCREEN)
+#screen = pygame.display.set_mode((screen_sizeX, screen_sizeY))
+screen = pygame.display.set_mode((screen_sizeX, screen_sizeY), flags=pygame.FULLSCREEN)
 
 
 # Get working directory and subdirectories
