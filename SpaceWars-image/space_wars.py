@@ -28,6 +28,13 @@ from datetime import datetime
 from high_scores import high_scores
 #import space_wars_settings as sws
 
+import tkinter as tk
+
+root = tk.Tk()
+
+screen_width = root.winfo_screenwidth()
+screen_height = root.winfo_screenheight()
+
 # initialize pygame 
 pygame.init()
 
@@ -419,8 +426,8 @@ PLAYER_NAME	= 'DAN'		#sws.PLAYER_NAME	# 'DAN'
 
 # Initialize Global variables
 #1440 900
-screen_sizeX = 1440
-screen_sizeY = 900
+screen_sizeX = screen_width
+screen_sizeY = screen_height
 screen_size = (screen_sizeX, screen_sizeY)
 background_color = black
 # Initialize screen
