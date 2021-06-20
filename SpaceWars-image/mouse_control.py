@@ -2,7 +2,6 @@ import cv2
 import time
 import mediapipe as mp
 import pyautogui as pg
-
 import tkinter as tk
 
 root = tk.Tk()
@@ -101,7 +100,7 @@ def isRightClick(landmarks) :
       return True
     else : return False
   else : return False
-
+isClicked = False
 prevTime = 0
 dsize = (int(screen_width*1.2),int(screen_height*1.2))
 
@@ -126,12 +125,20 @@ with mp_hands.Hands(max_num_hands=1,
             moveCurrsor(currPos)
         
         if (isClick(hand_landmarks)) :
-          pg.mouseDown()
-          print('click')
-        else : 
-          pg.mouseUp()
-          print('release')
-          pinch_position = []
+          if isClicked :
+              pass
+          else:
+              pg.mouseDown()
+              isClicked = True
+              print('click')
+          
+        else :
+            pg.mouseUp() 
+            isClicked = False
+            print('release')
+            pinch_position = []
+          
+          
         # if (isRightClick(hand_landmarks)) :
         #   pg.rightClick()
         #   print('right click')
