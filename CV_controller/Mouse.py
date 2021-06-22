@@ -1,3 +1,4 @@
+from tkinter.constants import X, Y
 import cv2
 import time
 import mediapipe as mp
@@ -16,8 +17,11 @@ pg.PAUSE = 0
 pg.FAILSAFE = True
 
 
-
 def moveCurrsor(currPos):
+  # x = pg.position().x
+  # y = pg.position().y
+  # new_x = x + direction[0] * 10
+  # new_y = y + direction[1] * 10
   pg.moveTo(currPos[0], currPos[1],)
 
 
@@ -36,8 +40,6 @@ def changeDirection(pinch_position, curr_pos) :
 
   if pinch_position[0] != curr_pos[0]:
     slope = (curr_pos[1]-pinch_position[1])/(curr_pos[0]-pinch_position[0])
-
-
 
 def getCurrentPosition(landmarks) :
   (h,w,c) = image.shape
@@ -134,7 +136,7 @@ with mp_hands.Hands(max_num_hands=1,
           pg.mouseUp()
           print('release')
           pinch_position = []
-          #direction = [0, 0]
+          direction = [0, 0]
         if (isRightClick(hand_landmarks)) :
           pg.rightClick()
           print('right click')

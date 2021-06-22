@@ -36,7 +36,7 @@ while True:
 	contoursOrange, _ = cv2.findContours(mask_orange, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
 	for c in contoursOrange :
-		if cv2.contourArea(c) <= 50 :
+		if cv2.contourArea(c) <= 1000 :
 			continue
 		x, y, _, _ = cv2.boundingRect(c)
 		m.position = x*1920/640, y*1120/400
@@ -45,7 +45,7 @@ while True:
 	contoursGreen, _ = cv2.findContours(mask_green, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
 	for c in contoursGreen :
-		if cv2.contourArea(c) <= 50 :
+		if cv2.contourArea(c) <= 1000 :
 			continue
 		now = datetime.datetime.now()
 		diff = now - last_click

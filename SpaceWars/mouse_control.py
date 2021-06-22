@@ -133,10 +133,11 @@ with mp_hands.Hands(max_num_hands=1,
               print('click')
           
         else :
-            pg.mouseUp() 
-            isClicked = False
-            print('release')
-            pinch_position = []
+            if isClicked :
+              pg.mouseUp() 
+              isClicked = False
+              print('release')
+              pinch_position = []
           
           
         # if (isRightClick(hand_landmarks)) :

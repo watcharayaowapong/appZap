@@ -11,7 +11,7 @@ prevTime = 0
 
 with mp_hands.Hands(max_num_hands=1,
     min_detection_confidence=0.7,
-    min_tracking_confidence=0.3) as hands:
+    min_tracking_confidence=0.1) as hands:
   while True:
     ret, frame = cap.read() 
     image = cv2.cvtColor(cv2.flip(frame, 1), cv2.COLOR_BGR2RGB)
