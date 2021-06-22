@@ -94,11 +94,11 @@ while True:
 
     # Draw the tracking result 
     x,y,w,h = track_window
-    xreal, yreal = (((x+w/2)/imgW)*1920),(((y+h/2)/imgH)*1080)
-    print(int(xreal),int(yreal))
+    #xreal, yreal = (((x+w/2)/imgW)*1920),(((y+h/2)/imgH)*1080)
+    #print(int(xreal),int(yreal))
 
     #m.position = xreal, yreal
-    m.position = x*1920/640, y*1120/400
+    #m.position = x*1920/640, y*1120/400
     m.position = x,y
 
     frameResult = cv2.rectangle( frame, (x,y), (x+w,y+h), 255, 2 )
