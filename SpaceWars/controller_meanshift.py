@@ -13,7 +13,7 @@ screen_width = root.winfo_screenwidth()
 screen_height = root.winfo_screenheight()
 
 
-delay = 50       # delay in millisecond for better observation regarding tracking results
+delay = 1       # delay in millisecond for better observation regarding tracking results
 
 # Read the first frame 
 
@@ -96,9 +96,12 @@ while True:
 
     # Draw the tracking result 
     x,y,w,h = track_window
-    print(int(x+w/2),int(y+h/2))
-    m.position = x, y
-    #m.position = x*1920/640, y*1120/400
+    xreal, yreal = (((x+w/2)/imgW)*1920),(((y+h/2)/imgH)*1080)
+    print(int(xreal),int(yreal))
+
+    #m.position = xreal, yreal
+    m.position = x*1920/640, y*1120/400
+    m.position = x,y
 
     frameResult = cv2.rectangle( frame, (x,y), (x+w,y+h), 255, 2 )
     probmapResult = cv2.rectangle( probMap, (x,y), (x+w,y+h), 255, 2 )
