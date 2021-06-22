@@ -4,7 +4,6 @@ import time
 import tkinter as tk
 from pynput.mouse import Controller, Button
 
-
 root = tk.Tk()
 m = Controller()
 
@@ -31,7 +30,6 @@ while True :
         cv2.destroyAllWindows()
         print("capture")
         break
-
 
 # Select the ROI for histogram backprojection by OpenCV's builtin function
 # Try to include only pixels with target colors and avoid including unrelated pixels in this ROI
