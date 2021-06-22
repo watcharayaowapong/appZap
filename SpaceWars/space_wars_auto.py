@@ -494,6 +494,7 @@ session_high_score 	= 0
 # Full Game Play Loop
 # --------------------
 
+
 quit_game = False
 while not quit_game:
 
@@ -537,11 +538,12 @@ while not quit_game:
 	# --------------------
 	# Main Game Play Loop
 	# --------------------
-
+	pygame.time.set_timer(pygame.USEREVENT, 500)
 	while not go_to_menu and not quit_game:
 
 		# Fill screen and background image	
 		screen.fill(background_color)
+        
 
 		# Background images moving
 		backgound_Y_lower += 1
@@ -574,6 +576,9 @@ while not quit_game:
 		for event in pygame.event.get():	
 			if event.type == pygame.QUIT:
 				quit_game = True	
+
+			if event.type == pygame.USEREVENT and not game_over:
+				bullet.fire_bullet(player)
 
 			# if key is pressed
 			if event.type == pygame.KEYDOWN:
