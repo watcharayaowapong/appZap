@@ -55,23 +55,23 @@ while True:
             #print((x,y,w,h))   
                    
             if x > 0 and y > 0 and x < 900 and y < 150:
-                #Press('A') #UP
+                Press('up') #UP
                 print('RED UP',x,y,w,h)
                 break     
 
 
             if x > 0 and y > 160 and x < 150 and y < 570:
-                Press('B') #LEFT
+                Press('left') #LEFT
                 print('RED LEFT',x,y,w,h)
                 break      
 
             if x > 750 and y > 160 and x < 900 and y < 570:
-                Press('C') #RIGHT
+                Press('right') #RIGHT
                 print('RED RIGHT',x,y,w,h)
                 break      
 
             if x > 0 and y > 580 and x < 900 and y < 700:
-                Press('D') #DOWN
+                Press('down') #DOWN
                 print('RED DOWN',x,y,w,h)
                 break      
 
@@ -89,24 +89,23 @@ while True:
             #print((x,y,w,h))   
                    
             if x > 0 and y > 0 and x < 900 and y < 150:
-                #Press('A') #UP
-                print('BLUE UP',x,y,w,h)
+                Press('up') #UP
+                print('UP',x,y,w,h)
                 break     
 
-
             if x > 0 and y > 160 and x < 150 and y < 570:
-                Press('B') #LEFT
-                print('BLUE LEFT',x,y,w,h)
+                Press('left') #LEFT
+                print('LEFT',x,y,w,h)
                 break      
 
             if x > 750 and y > 160 and x < 900 and y < 570:
-                Press('C') #RIGHT
-                print('BLUE RIGHT',x,y,w,h)
+                Press('right') #RIGHT
+                print('RIGHT',x,y,w,h)
                 break      
 
             if x > 0 and y > 580 and x < 900 and y < 700:
-                Press('D') #DOWN
-                print('BLUE DOWN',x,y,w,h)
+                Press('down') #DOWN
+                print('DOWN',x,y,w,h)
                 break      
   
     

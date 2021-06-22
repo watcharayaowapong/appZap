@@ -38,6 +38,10 @@ screen_height = root.winfo_screenheight()
 # initialize pygame 
 pygame.init()
 
+ 
+ 
+
+
 # Initialize global fonts
 font_huge	= pygame.font.Font('freesansbold.ttf', 128)
 font_large	= pygame.font.Font('freesansbold.ttf', 64)
@@ -385,8 +389,12 @@ def show_score(score, level, font_size = 16, x=10, y=10):
 	score_font = pygame.font.Font('freesansbold.ttf', font_size)
 	level_text = score_font.render("Level  : " + str(level), True, (255, 255, 0))
 	score_text = score_font.render("Score : " + str(score), True, (255, 255, 0))
+	fps = score_font.render("FPS : " + str(int(clock.get_fps())), True, (255, 255, 0))
+    
 	screen.blit(level_text, (x, y))
 	screen.blit(score_text, (x, y + 5 + font_size))
+	screen.blit(fps,  (x, y + 5 + (font_size*2) ))
+
 
 
 def show_game_over(screen_sizeX, screen_sizeY, score, high_score):
@@ -488,7 +496,6 @@ enemy_maxSpeedY		= 2
 bullet_speed		= 10
 
 session_high_score 	= 0
-
 
 # --------------------
 # Full Game Play Loop
@@ -602,11 +609,7 @@ while not quit_game:
 
 				# if space key, fire bullet			
 				elif (event.key == pygame.K_SPACE or event.key == pygame.K_a ) and bullet.state == 'hide' and not game_over:
-					bullet.fire_bullet(player)
-
-		
-				
-					
+					bullet.fire_bullet(player)		
 
 			# if key is released, stop movement in a nice way
 			if event.type == pygame.KEYUP:

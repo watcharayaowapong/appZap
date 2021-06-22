@@ -7,10 +7,8 @@ from pynput.mouse import Controller, Button
 root = tk.Tk()
 m = Controller()
 
-
 screen_width = root.winfo_screenwidth()
 screen_height = root.winfo_screenheight()
-
 
 delay = 1       # delay in millisecond for better observation regarding tracking results
 
