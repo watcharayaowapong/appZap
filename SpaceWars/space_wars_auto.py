@@ -27,7 +27,6 @@ import sqlite3
 from datetime import datetime
 from high_scores import high_scores
 
-
 import tkinter as tk
 
 root = tk.Tk()
