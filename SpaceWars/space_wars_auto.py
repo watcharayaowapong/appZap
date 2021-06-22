@@ -26,7 +26,7 @@ import time
 import sqlite3
 from datetime import datetime
 from high_scores import high_scores
-#import space_wars_settings as sws
+
 
 import tkinter as tk
 
