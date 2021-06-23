@@ -396,7 +396,6 @@ def show_score(score, level, font_size = 16, x=10, y=10):
 	screen.blit(fps,  (x, y + 5 + (font_size*2) ))
 
 
-
 def show_game_over(screen_sizeX, screen_sizeY, score, high_score):
 	
 	# Move enemies below screen (is there a better way?)
@@ -465,7 +464,7 @@ explosion_image		= [pygame.image.load(os.path.join(images_path, 'explosion_01.pn
 				       pygame.image.load(os.path.join(images_path, 'explosion_02.png'))]
 background_image	= [pygame.image.load(os.path.join(images_path, 'background_03.jpg')), 
 					   pygame.image.load(os.path.join(images_path, 'background_03_usd.jpg'))]
-background_image_hight = 600
+background_image_hight = 1200
 				      
 # Caption and Icon
 pygame.display.set_caption("Space Wars")
