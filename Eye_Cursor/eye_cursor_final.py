@@ -17,7 +17,7 @@ def blob_process(img, detector):
 
 # binary threshold control for when to cropped eye image
 def threshold_eye(eye_frame):
-    return cv2.threshold(eye_frame, 130, 255, cv2.THRESH_BINARY) #90
+    return cv2.threshold(eye_frame, 90, 255, cv2.THRESH_BINARY) #90
 
 # transform point in perspective1 to perspective2 using matrix
 def transform_point(x,y, matrix):
@@ -52,7 +52,7 @@ def calibrate():
             eye_frame = cv2.drawKeypoints(eye_frame, keypoints, eye_frame, (0, 0, 255), cv2.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
 
             if len(keypoints) == 1:
-                print('blob found')
+                # print('blob found')
                 old_keypoints = keypoints[0].pt
             else:
                 # try:
@@ -62,6 +62,7 @@ def calibrate():
             pass
 
         cv2.imshow("calibrate", cv2.resize(eye_frame  , (eye_frame.shape[1]*5 , eye_frame.shape[0]*5)))
+        print(old_keypoints)
         key = cv2.waitKey(1)
         if key == 27:
             break
@@ -214,16 +215,3 @@ while True:
 
 cap.release()
 cv2.destroyAllWindows()
-
-
-
-
-
-
-pers1=np.float32([[topleft(x,y)],[topright(x,y)],
-    [bottomleft(x,y)],[bottomright(x,y)]]) 
-
-pers2=np.float32([[0,0],[screen_width,0],
-    [0,screen_height],[screen_width,screen_height]])
-
-matrix=cv2.getPerspectiveTransform(pers1,pers2)
