@@ -10,7 +10,7 @@ Python : 3.7
 | File  | Description |
 | ------------- | ------------- |
 | 1. meanshift_controller.py  |  Using Meanshift to track object  | 
-| 2. boudingbox_colordetect_controller.ipynb  | Using Blue-Red Color Detection with Keyboard-Controller  |
+| 2. box_controller.ipynb  | Using Blue-Red Color Detection with Keyboard-Controller  |
 
 Original Code
 1. Class14_Aj.Thitirat TheSensei
