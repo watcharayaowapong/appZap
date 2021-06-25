@@ -97,7 +97,7 @@ while True:
     #frame=cv2.flip(frame,1)
     key=showFrame(frame)
 
-    if(key==ord('x')):
+    if(key==ord('q')):
         break
 
 
