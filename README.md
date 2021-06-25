@@ -1,9 +1,9 @@
 ### Main Application Implemented: https://github.com/watcharayaowapong/appZap/tree/main/SpaceWars
 
 ### Method that were implemented with SpaceWars game:
-1. Hand Gesture - To run: SpaceWars_hand_gesture.bat
-2. Color Detection - To run: SpaceWars_color_detection.bat
-3. Meanshift - To run: SpaceWars_mean_shift.bat
+1. Hand Gesture - To run: [SpaceWars_hand_gesture.bat](https://github.com/watcharayaowapong/appZap/blob/main/SpaceWars/SpaceWars_hand_gesture%20-%20Copy.bat)
+2. Color Detection - To run: [SpaceWars_color_detection.bat](https://github.com/watcharayaowapong/appZap/blob/main/SpaceWars/SpaceWars_color_detection.bat)
+3. Meanshift - To run: [SpaceWars_mean_shift.bat](https://github.com/watcharayaowapong/appZap/blob/main/SpaceWars/SpaceWars_mean_shift.bat)
 
 
 ### Movement Control Method:
